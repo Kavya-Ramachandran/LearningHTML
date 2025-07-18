@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HTML Video Feature Demo</title>
+</head>
+<body>
+
+  <h2> HTML5 Video Example with Full Features</h2>
+
+  <video
+    width="600"
+    height="340"
+    controls
+    autoplay
+    muted
+    loop
+    poster="thumbnail.jpg"
+    preload="metadata"
+    playsinline
+    crossorigin="anonymous"
+  >
+    <source src="video.mp4" type="video/mp4">
+    <source src="video.webm" type="video/webm">
+    <source src="video.ogv" type="video/ogg">
+
+    Your browser does not support the HTML5 video element.
+  </video>
+
+  <p><strong>Features demonstrated:</strong></p>
+  <ul>
+    <code>controls</code> — Play, pause, volume UI is shown
+    <li><code>autoplay</code> and <code>muted</code> — Video plays automatically with no sound</li>
+    <li><code>loop</code> — Restarts when finished</li>
+    <li><code>poster</code> — Shows <code>thumbnail.jpg</code> before video plays</li>
+    <li><code>preload="metadata"</code> — Only loads video metadata initially</li>
+    <li><code>playsinline</code> — Prevents full-screen on mobile</li>
+    <li><code>crossorigin="anonymous"</code> — Allows video to load from a different origin without cookies</li>
+    <li><code>&lt;source&gt;</code> tags — Provide MP4, WebM, and OGV formats for full browser support</li>
+  </ul>
+
+    <video controls width="600">
+  <source src="movie.mp4" type="video/mp4">
+  <track src="captions.vtt" kind="subtitles" srclang="en" label="English">
+</video>
+    <audio controls>
+  <source src="music.mp3" type="audio/mpeg">
+  <source src="music.ogg" type="audio/ogg">
+  Your browser does not support the audio element.
+</audio>
+<h4>embedded audio and video</h4>
+<h3>Product Demo</h3>
+<video controls width="500" poster="demo-thumbnail.jpg">
+  <source src="media/demo.mp4" type="video/mp4">
+</video>
+
+<h3>Company Intro Music</h3>
+<audio controls>
+  <source src="media/intro.mp3" type="audio/mpeg">
+</audio>
+</body>
+</html>
