@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Colors Showcase</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f4f4;
+      padding: 40px;
+      color: #333;
+    }
+
+    h1 {
+      color: navy;
+    }
+
+    p.description {
+      color: gray;
+    }
+
+    .section {
+      margin-bottom: 40px;
+    }
+
+    .color-box {
+      padding: 20px;
+      margin: 20px 0;
+      border-radius: 8px;
+      border: 3px solid black;
+    }
+
+    /* Example 1: Hex Color */
+    .hex-color {
+      color: #ffffff;
+      background-color: #3498db;   
+      border-color: #2980b9;
+    }
+
+    /* Example 2: RGB Color */
+    .rgb-color {
+      color: rgb(255, 255, 255);
+      background-color: rgb(46, 204, 113);  
+      border-color: rgb(39, 174, 96);
+    }
+
+    /* Example 3: RGBA (with transparency) */
+    .rgba-color {
+      color: #000;
+      background-color: rgba(241, 196, 15, 0.8); 
+      border-color: rgba(243, 156, 18, 1);
+    }
+
+    /* Example 4: HSL */
+    .hsl-color {
+      color: hsl(0, 0%, 100%);
+      background-color: hsl(12, 88%, 59%); 
+      border-color: hsl(12, 76%, 45%);
+    }
+
+    /* Example 5: Named color */
+    .named-color {
+      color: black;
+      background-color: lightpink;
+      border-color: deeppink;
+    }
+
+    /* Button with hover effects */
+    .color-button {
+      display: inline-block;
+      padding: 10px 20px;
+      margin-top: 10px;
+      background-color: #8e44ad;
+      color: white;
+      border: 2px solid #6c3483;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .color-button:hover {
+      background-color: #732d91;
+      color: #f9f9f9;
+    }
+
+  </style>
+</head>
+<body>
+
+  <h1>CSS Color Styling Examples</h1>
+  <p class="description">This page demonstrates various ways to apply colors using CSS.</p>
+
+  <div class="section hex-color color-box">
+    <h2>Hex Colors</h2>
+    <p>This box uses hex color codes for text, background, and border.</p>
+    <button class="color-button">Hex Button</button>
+  </div>
+
+  <div class="section rgb-color color-box">
+    <h2>RGB Colors</h2>
+    <p>This box uses RGB values for its styles.</p>
+    <button class="color-button">RGB Button</button>
+  </div>
+
+  <div class="section rgba-color color-box">
+    <h2>RGBA Colors (with transparency)</h2>
+    <p>RGBA allows you to add opacity/transparency to colors.</p>
+    <button class="color-button">RGBA Button</button>
+  </div>
+
+  <div class="section hsl-color color-box">
+    <h2>HSL Colors</h2>
+    <p>HSL stands for Hue, Saturation, and Lightness.</p>
+    <button class="color-button">HSL Button</button>
+  </div>
+
+  <div class="section named-color color-box">
+    <h2>Named Colors</h2>
+    <p>CSS supports about 140 named colors.</p>
+    <button class="color-button">Named Color Button</button>
+  </div>
+
+</body>
+</html>

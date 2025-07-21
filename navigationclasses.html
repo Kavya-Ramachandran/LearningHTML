@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navigation Bar with Pseudo-classes and Dropdown</title>
+  <style>
+    /* Basic reset */
+    * {
+      list-style-type:none;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Body */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+    }
+
+    /* Navigation bar */
+    nav {
+      background-color: #333;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    /* Logo */
+    .logo {
+      color: white;
+      font-size: 24px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    /* Navigation links */
+    .nav-links {
+      list-style-type: none;
+      display: flex;
+    }
+
+    .nav-links li {
+      position: relative;
+      margin: 0 15px;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      padding: 10px;
+      font-size: 16px;
+      transition: all 0.3s ease;
+    }
+
+    /* Hover effect */
+    .nav-links a:hover {
+      background-color: #575757;
+      color: #fff;
+    }
+
+    /* Active state (example for a current page link) */
+    .nav-links a:active {
+      background-color: #007BFF;
+      color: white;
+    }
+
+    /* Dropdown styles */
+    .dropdown {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #333;
+      width: 150px;
+      list-style-type: none;
+      padding: 10px 0;
+    }
+
+    .nav-links li:hover .dropdown {
+      display: block;
+    }
+
+    .dropdown li {
+      margin: 0;
+    }
+
+    .dropdown a {
+      padding: 10px;
+      color: white;
+      text-decoration: none;
+      font-size: 14px;
+      transition: background-color 0.3s ease;
+    }
+
+    .dropdown a:hover {
+      background-color: #575757;
+    }
+
+    /* Pseudo-element styling */
+    .nav-links li::before {
+      margin-right: 8px;
+      opacity: 0.6;
+    }
+
+    .nav-links li a::after {
+      content: ' ↓';
+      opacity: 0;
+      transition: opacity 0.2s ease;
+    }
+
+    .nav-links li:hover a::after {
+      opacity: 1;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav>
+    <a href="#" class="logo">MySite</a>
+    <ul class="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li>
+        <a href="#">Services</a>
+        <!-- Dropdown Menu -->
+        <ul class="dropdown">
+          <li><a href="#">Web Development</a></li>
+          <li><a href="#">SEO</a></li>
+          <li><a href="#">Design</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+</body>
+</html>
