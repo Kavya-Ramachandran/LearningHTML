@@ -1,0 +1,54 @@
+body{
+    background-color: aqua;
+}
+.layout{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 10vh 80vh 10vh;
+    grid-template-areas: 
+    " h h h"
+    "sb1 m sb2"
+    "f f f "
+    ;
+}
+.header{
+
+    grid-area: h;
+}
+.sidebar1{
+    grid-area: sb1;
+}
+.main{
+    grid-area: m;
+}
+.sidebar2{
+    grid-area: sb2;
+}
+.footer{
+    grid-area: f;
+}
+
+.layout div{
+    display: grid;
+    background-color: green;
+    border: 1px solid black;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+.container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+    gap:20px;
+    grid-template-rows: 1fr,2fr,3fr;
+}
+
+.para{
+    padding: 1rem;
+    background-color: pink;
+}
+
+.para1{
+    grid-column :span 2;
+}
