@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Transport Advisor</title>
+</head>
+<body>
+  <h2>How are you traveling today?</h2>
+
+  <select id="transport">
+    <option value="">--Select an option--</option>
+    <option value="car">Car</option>
+    <option value="bus">Bus</option>
+    <option value="bike">Bike</option>
+    <option value="walk">Walk</option>
+  </select>
+
+  <button onclick="giveAdvice()">Get Advice</button>
+
+  <p id="transportMessage"></p>
+  <p id="comment"></p>
+  <p id="section"></p>
+
+  <script>
+    function giveAdvice() {
+      const method = document.getElementById("transport").value;
+      const message = document.getElementById("transportMessage");
+      const comment = document.getElementById("comment");
+      const post= document.getElementById("section");
+      //  if-else check for selection
+      if (method === "") {
+        message.textContent = "Please select a transport method.";
+        comment.textContent = "you need to select an option";
+       return;
+      }
+
+      // Nested if-else to provide specific advice
+      if (method === "car") {
+        message.textContent = "Driving today? Make sure there's enough fuel.";
+      } else if (method === "bus") {
+        message.textContent = "Taking the bus? Don’t forget your pass!";
+      } else if (method === "bike") {
+        message.textContent = "Biking? Wear a helmet and check your tires.";
+      } else {
+        message.textContent = "Nice walk! Comfortable shoes make it better.";
+      }
+
+      // Switch for environmental comment
+      switch (method) {
+        case "car":
+          comment.textContent = "Cars are convenient but pollute more.";
+          break;
+        case "bus":
+          comment.textContent = "Public transport helps reduce traffic!";
+          break;
+        case "bike":
+          comment.textContent = "Bikes are great for health and the planet!";
+          break;
+        case "walk":
+          comment.textContent = "Walking is the healthiest choice!";
+          break;
+        default:
+          comment.textContent = "";
+      }
+      
+      if(method==="car"){
+        section.textContent = "Drive a car slowly.";
+      } else if(method==="bus"){
+        section.textContent="Drive a bus slowly.";
+      } else if (method==="bike"){
+        section.textContent="Bike is dangeorous.";
+      }else{
+        section.textContent="Walking is heathier than other!."
+      }
+
+    }
+  </script>
+</body>
+</html>
