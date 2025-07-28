@@ -1,4 +1,4 @@
-const np = new Promise((resolve, reject) => {
+/*const np = new Promise((resolve, reject) => {
     let data = true;
 
     if (data) {
@@ -15,6 +15,10 @@ np.then((comment) => {
 }).finally(()=>{
     console.log("end"); 
 });
+
+np();
+
+
 //promise using callback
 
 function profile(success,failure){
@@ -104,7 +108,18 @@ function promisie() {
 promisie()
   .then(result => console.log(result))
   .catch(err => console.error(err));
-
-
-
+*/
+//promise call back
+function profile(success,failure){
+  let data=false;
+    if(data){
+      success("successed");
+    }else{
+      failure("failed to recieve data");
+    }
+  }
+profile((message)=>{
+  console.log(message)},
+(message)=>{
+  console.log(message) });
 
