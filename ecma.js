@@ -105,6 +105,7 @@ const bookiterators = createbookiterator(book);
 console.log(bookiterators.next()); 
 console.log(bookiterators.next()); 
 console.log(bookiterators.next()); 
+
 console.log(bookiterators.next()); 
 //
 function* count(){
