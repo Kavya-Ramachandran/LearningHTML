@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Library Management</title>
+  <link rel="stylesheet" href="library.css">
+</head>
+
+<body>
+  <h1 id="heading"> Library Mangement</h1>
+  <div class=" buttoncenter">
+    <button id="open-form-btn">Add Book</button>
+  </div>
+
+
+  <div id="book-list"></div>
+  
+
+
+  <div id="book" class="model">
+    <div class="model-content">
+      <button class="closebtn" id="close">&times;</button>
+      <h2>Add New Book</h2>
+      <form id="book-form">
+        <input type="text" id="title" placeholder="Title" required />
+        <input type="text" id="author" placeholder="Author" required />
+        <input type="number" id="year" placeholder="Year" required />
+        <button type="submit">Add Book</button>
+      </form>
+    </div>
+  </div>
+  <table class="tablecenter" id="tabledesign" border="1">
+    
+    <thead>
+      <tr>
+        <th class="s-no">S.NO</th>
+        <th class="title">Title</th>
+        <th class="author">Author</th>
+        <th class="year">Year</th>
+        <th class="action">Action</th>
+
+      </tr>
+    </thead>
+    <tbody id="tablename">
+
+
+    </tbody>
+  </table>
+  <script src="library.js"></script>
+</body>
+
+</html>
