@@ -1,0 +1,36 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    border-style: double;
+    flex-wrap: wrap-reverse;
+}
+
+.image img {
+    height: 200px;
+    width: 200px;
+    justify-content: center;
+    margin: 20px 20px 20px 20px;
+}
+
+.image {
+    background-color: greenyellow;
+}
+
+.content {
+    margin: 10px;
+    flex: 1;
+}
+
+button {
+    margin: 10px;
+    background-color: green;
+    padding: 10px;
+}
+
+@media screen and (max-width:600px) {
+    .image {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+}

@@ -25,7 +25,7 @@ let match = date.match(regex);
 
 if (match) {
   console.log(`Year: ${match[1]}, Month: ${match[2]}, Day: ${match[3]}`);
-  
+
 }
 let text1= "London and New York are cities.";
 let caps = text1.match(/\b[A-Z][a-z]+\b/g);

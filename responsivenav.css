@@ -1,0 +1,27 @@
+ul{
+    background-color: gray;
+    padding: 20px;
+    list-style-type: none;
+    display: flex;
+    gap: 40px;
+    
+    
+}
+li a{
+    text-decoration: none;
+    color: black;
+}
+li a:hover{
+    background-color: green;
+    padding:20px;
+    
+}
+@media  screen and (max-width:600px){
+    ul{
+        flex-direction: column;
+        background-color: aqua;
+        font-weight: bold;
+        padding:20px;
+    }
+    
+}

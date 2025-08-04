@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Non‑Semantic HTML Example</title>
+  <style>
+    .container { margin: 0 auto; width: 80%; }
+    .header, .footer { background: #eee; padding: 20px; }
+    .nav { margin-bottom: 20px; }
+    .content { display: flex; }
+    .main { flex: 2; padding: 10px; }
+    .sidebar { flex: 1; padding: 10px; background: #f9f9f9; }
+    .title { font-size: 2em; font-weight: bold; }
+    .date { color: #777; font-size: 0.9em; }
+    .article { margin-bottom: 20px; }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="header">
+      <div class="title">My Blog</div>
+      <div class="nav">
+        <span>Home</span>  | <span>About</span> | <span>Contact</span>
+      </div>
+    </div>
+
+    <div class="content">
+      <div class="main">
+        <div class="article">
+          <div class="title">Understanding Non‑Semantic HTML</div>
+          <div class="date">August 1, 2025</div>
+          <div class="body">
+            <div>This example uses only <span>div</span> and <span>span</span> tags.</div>
+            <div>The structure is represented through classes rather than semantic HTML5 tags.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sidebar">
+        <div>Related Posts</div>
+        <div>• Post A</div>
+        <div>• Post B</div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div>© 2025 My Blog. All rights reserved.</div>
+      <div>Contact: <span>info@example.com</span></div>
+    </div>
+  </div>
+
+</body>
+</html>
