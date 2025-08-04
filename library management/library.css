@@ -10,7 +10,6 @@ body {
         margin: 0px;
 
     }
-
     #book-list {
       margin-top: 20px;
     }
@@ -19,8 +18,7 @@ body {
       padding: 10px;
       margin-bottom: 10px;
       border-left: 4px solid #8493a3;
-    }
-
+    }      
     .model {
       display: none;
       position: fixed;
