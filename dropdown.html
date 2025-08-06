@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .elements{
+            background-color: blue;
+            display:flex;
+            flex-direction: row;
+            padding:20px;
+            list-style-type: none;
+            gap:20px;
+            
+        }
+        li a{
+            color:white;
+            text-decoration: none;          
+        }
+        .dropdown{
+            display:none;
+            position: absolute;
+
+        } 
+        .dropdown li a{
+            display:block;
+        }
+        .elements li:hover .dropdown{
+            display:block;
+          
+        }
+    </style>
+</head>
+<body>
+   <ul class="elements">
+    <li><a href="#">home</a></li>
+    <li><a href="#">web services</a>
+    <ul class="dropdown">
+        <li ><a href="#">wqnf</a></li>
+        <li><a href="#">rtyygv</a></li>
+    </ul></li>
+
+    
+   </ul> 
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Responsive Navigation Bar</title>
+  <link rel="stylesheet" href="navigation.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">Responsive Nav</div>
+
+    <div class="hamburger" id="hamburger">&#9776;</div>
+
+    <ul class="navlink" id="navLinks">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Menu</a></li>
+      <li><a href="#">HTML</a></li>
+      <li><a href="#">About Us</a></li>
+    </ul>
+  </nav>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>
