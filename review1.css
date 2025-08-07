@@ -1,0 +1,12 @@
+.container1{
+    background-color: aqua;
+    
+    display:flex;
+    justify-content: start ;
+}
+.container2{
+    background-color: pink;
+    
+    display: flex;
+    justify-content: center;
+}
