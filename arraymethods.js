@@ -8,22 +8,24 @@ const taskname = tasks.find((e) => {
     return e.name === "Pay bills"
 }
 );
+// { id: 3, name: 'Pay bills', completed: false },
 console.log(taskname);
 const task = tasks.some((e) => {
     return e.completed === false;
 });
 console.log(task);
+//true
 
 const taskall = tasks.every((e) => {
     return e.completed;
 })
 console.log(taskall);
-
+//false
 const filter = tasks.filter((e) => {
     return e.completed;
 });
 console.log(filter);
-
+// { id: 4, name: 'Read a book', completed: true },
 const cart = [
     { id: 1, item: 'Phone', price: 799, quantity: 1 },
     { id: 2, item: 'Charger', price: 25, quantity: 2 },
@@ -35,13 +37,16 @@ const products = cart.filter((e) => {
     return e.price > 100;
 })
 console.log(products);
-
-const total = cart.reduce((acc, item) => acc + (item.price * item.quantity), 0);
+//[{ id: 1, item: 'Phone', price: 799, quantity: 1 },{ id: 3, item: 'Headphones', price: 199, quantity: 1 }]
+ 
+const total = cart.reduce((acc, item) => acc + (item.price * item.quantity), 7);
 console.log(total, "total value");
+//
 const totl = cart.find((e) => {
     return e.price === 199
 })
 console.log(totl);
+//
 
 const item = cart.some((e) => {
     return e.quantity > 2;
@@ -100,12 +105,19 @@ const done = taskss.filter((e) => {
 });
 console.log(done);
 
-/*const notdone=taskss.find((e)=>{
+const notdone=taskss.find((e)=>{
     return e.done===false;
 });
-console.log(notdone);*/
+console.log(notdone);
 const home = taskss.filter((item) => item.category == "home").every((e) => e.done == false);
 console.log(home);
+
+const allTasks = taskss.filter((item) => item.category === "home" && item.done === true);
+
+allTasks.forEach((task) => {
+    console.log(task);
+});
+
 
 const completed=taskss.filter((e)=>e.category=="work").every((e)=>e.done);
 console.log(completed);

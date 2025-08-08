@@ -58,5 +58,5 @@ function slug(e){
     slug=slug.replaceAll(" ","-");
     console.log(slug);
 }
-slug(string)
+slug(string);
 
