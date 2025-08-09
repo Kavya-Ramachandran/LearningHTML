@@ -1,4 +1,4 @@
-/*const np = new Promise((resolve, reject) => {
+const np = new Promise((resolve, reject) => {
     let data = true;
 
     if (data) {
@@ -46,15 +46,13 @@ fetch((err, data) => {
 });
 
 function Promise() {
-  return new Promise((resolve, reject) => {
+  return new Promise((resolve) => {
     setTimeout(() => {
       const data = { id: 1, name: "John" };
       resolve(data);
     }, 1000);
   });
 }
-
-
 Promise()
   .then(data => {
     console.log("Data from promise:", data);
@@ -63,14 +61,7 @@ Promise()
     console.error("Error:", err);
   });
 
-  Promise()
-  .then(data => {
-    console.log("Data from promise:", data);
-  })
-  .catch(err => {
-    console.error("Error:", err);
-  });
-
+  
   function oldStyleFunction(callback) {
   setTimeout(() => {
     callback(null, "This is from a callback");
@@ -108,7 +99,7 @@ function promisie() {
 promisie()
   .then(result => console.log(result))
   .catch(err => console.error(err));
-*/
+
 //promise call back
 function profile(success,failure){
   let data=false;
