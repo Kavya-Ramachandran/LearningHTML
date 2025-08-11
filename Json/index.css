@@ -1,0 +1,114 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f0f2f5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+.userData-div {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
+    gap: 2rem;
+    width: 100%;
+}
+
+.user-card {
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    max-width: 420px;
+    max-height: fit-content !important;
+    overflow: hidden;
+    transition: transform 0.2s ease;
+}
+
+.user-card:hover {
+    transform: translateY(-5px);
+}
+
+.user-header {
+    background: linear-gradient(135deg, #4e54c8, #8f94fb);
+    padding: 24px;
+    color: white;
+    text-align: center;
+}
+
+.user-info h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.username {
+    font-size: 0.95rem;
+    opacity: 0.85;
+}
+
+.user-body {
+    padding: 24px;
+    color: #333;
+}
+
+.info-block p {
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+}
+
+a {
+    color: #4e54c8;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.accordion-btn {
+    background-color: #f6f8fa;
+    color: #333;
+    cursor: pointer;
+    padding: 14px 16px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: background 0.3s ease;
+    font-size: 1rem;
+    border-top: 1px solid #eee;
+}
+
+.accordion-btn:hover {
+    background-color: #eaeaea;
+}
+
+.accordion-btn.active {
+    background-color: #e0e0e0;
+    font-weight: 600;
+}
+
+.accordion-content {
+    padding: 0 16px 12px 16px;
+    display: none;
+    overflow: hidden;
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+}
+
+.accordion-content p {
+    margin: 10px 0;
+    font-size: 0.93rem;
+}
+
+.geo {
+    font-size: 0.9rem;
+    color: #666;
+}
