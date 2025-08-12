@@ -77,24 +77,24 @@ function version() {
   });
 }
 
-version()
-  .then(result => console.log(result))
-  .catch(err => console.error(err));
+// version()
+//   .then(result => console.log(result))
+//   .catch(err => console.error(err));
 
-  function function(callback) {
-  setTimeout(() => {
-    callback(null, "This is from a callback");
-  }, 1000);
-}
+//   function function(callback) {
+//   setTimeout(() => {
+//     callback(null, "This is from a callback");
+//   }, 1000);
+// }
 
-function promisie() {
-  return new Promise((resolve, reject) => {
-   function((err, result) => {
-      if (err) return reject(err);
-      resolve(result);
-    });
-  });
-}
+// function promisie() {
+//   return new Promise((resolve, reject) => {
+//    function((err, result) => {
+//       if (err) return reject(err);
+//       resolve(result);
+//     });
+//   });
+// }
 
 promisie()
   .then(result => console.log(result))
