@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+ 
+
+  <form id="myForm">
+  <input id="email" type="email" placeholder="Email">
+  <button type="submit">Submit</button>
+  <button type="reset">Reset</button>
+</form>
+
+<div id="box" style="width:150px; height:150px; background:#eee;">
+
+</div>
+<script>
+const box = document.getElementById('box');
+box.addEventListener('mouseenter', () =>{
+   console.log('Entered box')});
+
+box.addEventListener('mouseleave', () =>{
+   console.log('Left box')});
+
+box.addEventListener('mousemove', e => {
+  console.log(`X: ${e.clientX}, Y: ${e.clientY}`);
+});
+</script>
+
+<script>
+  const form = document.getElementById('myForm');
+  const email = document.getElementById('email');
+
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    console.log('Form submitted with email:', email.value);
+  });
+
+  form.addEventListener('reset', () =>{ 
+    console.log('Form reset')});
+
+   email.addEventListener('focus', () =>{ 
+     email.style.background = 'grey'});
+
+   email.addEventListener('blur', () =>{
+     email.style.background = ''});
+
+  email.addEventListener('change', () =>{
+     console.log('Email changed to:', email.value)});
+
+   email.addEventListener('input', () =>{ 
+     console.log('Email typing...')});
+
+</script>
+
+<button id="btn">Click or Double‑Click Me</button>
+<script>
+const btn = document.getElementById('btn');
+
+btn.addEventListener('click', () => {
+console.log('Clicked')});
+
+btn.addEventListener('dblclick', () => {
+console.log('Double-clicked')});
+
+btn.addEventListener('mousedown', () => {
+console.log('Mouse down')});
+
+btn.addEventListener('mouseup', () => {
+console.log('Mouse up')});
+
+</script>
+
+<div id="drag" draggable="true">Drag me</div>
+<div id="drop" style="width:150px;height:150px;border:1px solid;">Drop here</div>
+<script>
+const drag = document.getElementById('drag');
+const drop = document.getElementById('drop');
+
+drag.addEventListener('dragstart', e => {
+  e.dataTransfer.setData('text', e.target.id)});
+
+drop.addEventListener('dragover', e =>{
+   e.preventDefault()});
+
+drop.addEventListener('drop', e => {
+  e.preventDefault();
+  const id = e.dataTransfer.getData('text');
+  e.target.appendChild(document.getElementById(id));
+});
+</script>
+<script>
+const canvas = document.querySelector('canvas');
+
+canvas.addEventListener('pointerdown', () =>{
+   console.log('Pointer down')});
+
+canvas.addEventListener('pointermove', () => {
+  console.log('Pointer moving')});
+
+canvas.addEventListener('pointerup', () =>{
+  console.log('Pointer up')});
+
+</script>
+
+</body>
+</html>
