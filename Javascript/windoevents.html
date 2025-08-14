@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Window Events Demo</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            line-height: 1.4;
+            margin: 20px;
+        }
+
+        #size,
+        #pos,
+        #network,
+        #hash,
+        #history,
+        #loadMsg,
+        #pageshowMsg {
+            margin: 10px 0;
+            padding: 8px;
+            background: #f0f0f0;
+            border-radius: 4px;
+        }
+
+        #content {
+            height: 2000px;
+            background: linear-gradient(white, #ddd);
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1> Window Events Demo</h1>
+
+    <div id="loadMsg">Waiting for full load…</div>
+    <div id="pageshowMsg">...pageshow event not fired yet</div>
+    <div id="size">Window size</div>
+    <div id="pos">Scroll position</div>
+    <div id="network">Network status: --</div>
+
+    <p>Scroll down to trigger the <strong>scroll</strong> event.</p>
+    <div id="content"></div>
+
+    <script>
+        const loadMsg = document.getElementById('loadMsg');
+        window.addEventListener('load', () => {
+            loadMsg.textContent = 'Window fully loaded ';
+        });
+
+        const pageshowMsg = document.getElementById('pageshowMsg');
+        window.addEventListener('pageshow', event => {
+            const fromCache = event.persi ? 'true' : 'false';
+            pageshowMsg.textContent = `pageshow ${fromCache}`;
+        });
+
+        const size = document.getElementById('size');
+        window.addEventListener('resize', () => {
+            size.textContent = `Window size: ${window.innerWidth} x ${window.innerHeight}`;
+        });
+        size.textContent = `Window size: ${window.innerWidth} x ${window.innerHeight}`;
+
+        const pos = document.getElementById('pos');
+        window.addEventListener('scroll', () => {
+            pos.textContent = `Scroll position: ${window.scrollY} `;
+        });
+        const network = document.getElementById('network');
+        function updateNetwork(event) {
+            console.log(event);
+            network.textContent = `Network status: ${navigator.onLine ? 'online' : 'offline'}`;
+        }
+        window.addEventListener('online', updateNetwork);
+        window.addEventListener('offline', updateNetwork);
+        updateNetwork();
+        window.addEventListener('online', (event) => {
+            console.log(event);
+        })
+    </script>
+</body>
+
+</html>

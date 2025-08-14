@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>WebSocket Echo Example</title>
+</head>
+<body>
+  <h2>WebSocket Demo</h2>
+ 
+  <input type="text" id="inputMsg" placeholder="Type message..." />
+  <button onclick="sendMessage()">Send</button>
+
+  <div id="messages" style="margin-top: 20px; padding: 10px; border: 1px solid #ccc; height: 200px; overflow-y: scroll;">
+    <strong>Messages:</strong>
+  </div>
+
+  <script>
+    const socket = new WebSocket('wss://ws.ifelse.io');
+
+    const messagesDiv = document.getElementById('messages');
+
+    socket.addEventListener('open', () => {
+      addMessage("Connected to WebSocket server.");
+    });
+
+    socket.addEventListener('message', event => {
+      addMessage("Server: " + event.data);
+    });
+
+    socket.addEventListener('close', () => {
+      addMessage(" Connection closed.");
+    });
+
+    socket.addEventListener('error', (err) => {
+      addMessage("Error: " + err.message);
+    });
+
+    function sendMessage() {
+      const input = document.getElementById('inputMsg');
+      const message = input.value.trim();
+      if (message) {
+        socket.send(message);
+        addMessage(" You: " + message);
+        input.value = "";
+      }
+    }
+    function addMessage(msg) {
+      messagesDiv.innerHTML += `<p>${msg}</p>`;
+      messagesDiv.scrollTop = messagesDiv.scrollHeight;
+    }
+  </script>
+</body>
+</html>
