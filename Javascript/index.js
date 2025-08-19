@@ -20,7 +20,7 @@ export const expo=((a,b)=>{
 export const power=((a,b)=>{
     return a**a;
 });
-
+  
 export const modu=((a,b)=>{
     return a%b;
 });
